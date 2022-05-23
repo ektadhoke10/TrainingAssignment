@@ -2,9 +2,9 @@ package string_examples;
 
 
 
-public class TestStringExample {
+public class TestStringExamples {
 public static void main(String[] args) {
-	StringExample objStringExample = new StringExample();
+	StringExamples objStringExample = new StringExamples();
 	String strName="Ekta Dhoke";
 	String strFullName= objStringExample.getFullName("Ekta", "Dhoke");
 	System.out.println("Full Name is: "+ strFullName);
