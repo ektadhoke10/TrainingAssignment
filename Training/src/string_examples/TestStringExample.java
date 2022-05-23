@@ -25,10 +25,19 @@ public static void main(String[] args) {
 	System.out.println("------------------------------------");
 	System.out.println(strFullName.equals(strName));
 	System.out.println("------------------------------------");
-
-	
 	objStringExample.displayCharArray("Verve Square Technologies");
+	System.out.println("------------------------------------");
 	
+	
+	System.out.println(objStringExample.stringBufferExample());
+	
+	
+	System.out.println("------------------------------------");
+
+	System.out.println(objStringExample.stringBuilderExample());
+	
+	
+		
 	
 	
 }
