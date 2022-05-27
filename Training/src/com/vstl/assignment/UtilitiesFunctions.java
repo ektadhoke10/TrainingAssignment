@@ -19,21 +19,62 @@ public class UtilitiesFunctions{
 
 	}
 
-
 	public static String getMobileNumber() {
 		Random objRandom= new Random();	
+		int intFirstThreeNumber;
 		int intMoNo;
+
 		String strArrOfNumber[]= new String[10];
-		for (int intCount = 0; intCount <10; intCount++){
-			
+
+		for (int intCount = 0; intCount< 3; intCount++) {
+
+			intFirstThreeNumber = objRandom.nextInt(3)+7;
+
+			strArrOfNumber[intCount]=Integer.toString(intFirstThreeNumber);
+		}
+
+		String strStarting = strArrOfNumber[0]+strArrOfNumber[1]+strArrOfNumber[2];
+
+		for (int intCount = 0; intCount <7; intCount++){
+
 			intMoNo= objRandom.nextInt(10);	
-			
+
 			strArrOfNumber[intCount]=Integer.toString(intMoNo);
 		}
-		String strMobileNumber= strArrOfNumber[0]+strArrOfNumber[1]+strArrOfNumber[2]+strArrOfNumber[3]+strArrOfNumber[4]+strArrOfNumber[5]+strArrOfNumber[6]+strArrOfNumber[7]+strArrOfNumber[8]+strArrOfNumber[9];
-		return strMobileNumber;
 
-	}	
+		String strMobileNumber = strArrOfNumber[0]+strArrOfNumber[1]+strArrOfNumber[2]+strArrOfNumber[3]+strArrOfNumber[4]+strArrOfNumber[5]+strArrOfNumber[6];
+
+		return strStarting + strMobileNumber;
+
+	}
+	
+	/* public static String getMobileNumber() {
+		Random objRandom= new Random();	
+		int intMoNo;
+
+		String strArrOfNumber[]= new String[10];
+
+		int intFirstNumber = objRandom.nextInt(3)+7;
+
+		strArrOfNumber[intFirstNumber]=Integer.toString(intFirstNumber);
+
+
+		for (int intCount = 0; intCount <9; intCount++){
+
+			intMoNo= objRandom.nextInt(10);	
+
+			strArrOfNumber[intCount]=Integer.toString(intMoNo);
+		}
+
+		String strMobileNumber = intFirstNumber + strArrOfNumber[0]+strArrOfNumber[1]+strArrOfNumber[2]+strArrOfNumber[3]+strArrOfNumber[4]+strArrOfNumber[5]+strArrOfNumber[6]+strArrOfNumber[7]+strArrOfNumber[8];
+
+		return  strMobileNumber;
+
+	}	*/
+
+	
+	
+	
 
 	public static String getDateOfBirth() {
 		Random objRandom= new Random();	
